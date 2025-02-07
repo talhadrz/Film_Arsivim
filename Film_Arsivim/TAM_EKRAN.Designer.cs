@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.web2 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            ((System.ComponentModel.ISupportInitialize)(this.web2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -42,15 +44,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // web2
+            // 
+            this.web2.AllowExternalDrop = true;
+            this.web2.CreationProperties = null;
+            this.web2.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.web2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.web2.Location = new System.Drawing.Point(0, 0);
+            this.web2.Name = "web2";
+            this.web2.Size = new System.Drawing.Size(728, 529);
+            this.web2.TabIndex = 1;
+            this.web2.ZoomFactor = 1D;
+            // 
             // Tam_Ekran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 529);
+            this.Controls.Add(this.web2);
             this.Controls.Add(this.button1);
             this.Name = "Tam_Ekran";
-            this.Text = "Tam_Ekran";
+            this.Text = "TAM EKRAN";
             this.Load += new System.EventHandler(this.Tam_Ekran_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.web2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -58,5 +74,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
+        public Microsoft.Web.WebView2.WinForms.WebView2 web2;
     }
 }

@@ -13,22 +13,19 @@ namespace Film_Arsivim
 {
     public partial class Tam_Ekran : Form
     {       
-        WebView2 web = new WebView2();
-        public Tam_Ekran(string url)
+        public Tam_Ekran()
         {
             InitializeComponent();
-            web.Source = new Uri(url);
         }
         private void Tam_Ekran_Load(object sender, EventArgs e)
         {
-            web.Dock = DockStyle.Fill;
-            this.Controls.Add(web);
+            this.Controls.Add(web2);
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
+            FAVORİLERİM frm = new FAVORİLERİM();
             frm.Show();
-            frm.web1.Source = web.Source;
+            frm.web1.Source = web2.Source;
             this.Close();
         }
     }
